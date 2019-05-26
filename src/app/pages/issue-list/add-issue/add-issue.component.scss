@@ -1,0 +1,123 @@
+$botton_Bcolor :#4596f6;
+$botton_Bcolor_hover :#368cf5;
+$base-color : #4596f6;
+
+nb-card {
+    background: #fdfdfd;
+}
+
+.form_title {
+    height: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5c5b5b;
+    background-color: #fdfdfd;
+    position: absolute;
+    right: 48px;
+    top: -11px;
+    padding: 0 10px;
+}
+
+.form-control {
+    padding: 8px;
+    height: 39px;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    border: solid 1px #dedbdb;
+    display: inline-block;
+    width: 68%;
+    margin-right: 20px;
+    font-family: IRANSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+}
+
+.form-control::placeholder {
+    color: #9b9b9b;
+}
+
+.form-control::placeholder {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.form-control:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.form-control::-ms-input-placeholder {
+    /* Microsoft Edge */
+    font-size: 12px;
+    font-weight: 400;
+}
+
+textarea {
+    height: auto;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form label {
+    width: 22%;
+    height: 17px;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #6c6c6c;
+}
+
+.form-group small {
+    margin-right: 9.2rem !important;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+form button {
+    float: left;
+    margin-left: 4%;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 6px 45px;
+    text-align: center;
+    cursor: pointer;
+    font-stretch: normal;
+    background-color: $botton_Bcolor;
+}
+
+form button:hover {
+    background-color: $botton_Bcolor_hover;
+}
+
+#issueDiscription {
+    margin-top: 10px;
+    width: 196%;
+}
+
+.page-title{
+    padding: 20px;
+}

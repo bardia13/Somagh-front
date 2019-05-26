@@ -1,0 +1,46 @@
+<div class="page-title">
+  <h3>ویرایش کاربر</h3>
+</div>
+<nb-card>
+  <nb-card-body>
+    <form [formGroup]="userForm">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="title"> عنوان</label>
+              <input type="text" formControlName="title" class="form-control" id="title">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="type"> موضوع </label>
+              <input type="text" formControlName="type" class="form-control" id="type" placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="description"> توضیح</label>
+              <input type="text" formControlName="description" class="form-control" id="description" placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class = "row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="department"> بخش مسؤل</label>
+              <input type="text" disabled="disabled" formControlName="department" class="form-control" id="department"
+                placeholder="">
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <button (click)="submit()" class="btn btn-primary">ثبت</button>
+    </form>
+  </nb-card-body>
+</nb-card>

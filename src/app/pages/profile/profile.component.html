@@ -1,0 +1,41 @@
+<div class="page-title">
+  <h3>{{pageTitle}}</h3>
+</div>
+
+<nb-card class="profile_card">
+  <div class="row">
+    <div class="card avatar-card">
+      <img class="card-img-top" src="../../../assets/images/avatar.png" alt="Card image cap">
+      <div class="card-body">
+        <div class="card-text">
+          <p id="fullName">فاطمه خدایاری</p>
+          <p id="username">FatemeKhodayari@</p>
+          <p id="major">کارشناسی مهندسی کامپیوتر، گرایش معماری سیستم‌های کامپیوتری</p>
+        </div>
+        <button class="btn btn-primary" id="edit-profile-button" (click)="onChangeClick()">ویرایش پروفایل</button>
+      </div>
+    </div>
+    <div class="card profile-card">
+      <div class="card-body">
+        <div class="card-text">
+          <nb-card class="issues-card">
+            <nb-card-header>درخواست‌ها</nb-card-header>
+            <nb-card-body>
+              <div class="card issue-card">
+                <div class="card-header">
+                  <div class="row">
+                    <img src="../../../assets/images/form.png" class="form-icon">
+                    <p class="issue-subject">سرویس سیستم‌ سرمایشی</p>
+                  </div>
+                </div>
+                <div class="card-body card-text">
+                  <p class="issue-discription">با سلام. لطفاً با توجه به گرم شدن هوا، سیستم‌های تهویه را سرویس کنید.</p>
+                </div>
+              </div>
+            </nb-card-body>
+          </nb-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</nb-card>

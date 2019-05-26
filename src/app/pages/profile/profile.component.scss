@@ -1,0 +1,51 @@
+@import '../../@theme/styles/themes';
+
+.avatar-card {
+  color: black;
+  width: 22.5%;
+  height: 100%;
+  position: relative;
+
+  #fullName {
+    font-size: 22px;
+    font-weight: 500px;
+    margin-bottom: 5px;
+  }
+  
+  #username {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  #edit-profile-button {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.profile-card {
+  width: 77.5%;
+  position: relative;
+
+  .issue-card {
+    position: relative;
+
+    .form-icon {
+      height: 4%;
+      width: 4%;
+    }
+
+    .issue-subject {
+      font-size: 16px;
+      margin-top: 1%;
+      margin-right: 1%;
+      margin-bottom: 0;
+    }
+
+    .issue-discription {
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+  }
+
+}

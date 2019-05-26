@@ -1,0 +1,175 @@
+@font-face {
+	font-family: "IRANSanssWeb";
+	src: url("../../../assets/fonts/iransans/IRANSansWeb.eot") format("eot"),
+		url("../../../assets/fonts/iransans/IRANSansWeb.woff2") format("woff2"),
+		url("../../../assets/fonts/iransans/IRANSansWeb.woff") format("woff"),
+		url("../../../assets/fonts/iransans/IRANSansWeb.ttf") format("truetype");
+		//  url("fonts/Samplino.svg#Samplino") format("svg");
+}
+
+@font-face {
+	font-family: "IRANSanssWeb";
+	font-style: italic;
+	font-weight: bold;
+	src: url("../../../assets/fonts/iransans/IRANSansWeb_Bold.eot") format("eot"),
+		url("../../../assets/fonts/iransans/IRANSansWeb_Bold.woff2") format("woff2"),
+		url("../../../assets/fonts/iransans/IRANSansWeb_Bold.woff") format("woff"),
+		url("../../../assets/fonts/iransans/IRANSansWeb_Bold.ttf") format("truetype");
+		//  url("fonts/Samplino.svg#Samplino") format("svg");
+}
+
+@font-face {
+	font-family: "IRANSanssWeb";
+	font-weight: 300;
+
+	src: url("../../../assets/fonts/iransans/IRANSansWeb_Light.eot") format("eot"),
+		url("../../../assets/fonts/iransans/IRANSansWeb_Light.woff2") format("woff2"),
+		url("../../../assets/fonts/iransans/IRANSansWeb_Light.woff") format("woff"),
+		url("../../../assets/fonts/iransans/IRANSansWeb_Light.ttf") format("truetype");
+		//  url("fonts/Samplino.svg#Samplino") format("svg");
+}
+
+@font-face {
+	font-family: "IRANSanssWeb";
+	font-weight: 500;
+	font-style: normal;
+	src: url("../../../assets/fonts/iransans/IRANSansWeb_Medium.eot") format("eot"),
+		url("../../../assets/fonts/iransans/IRANSansWeb_Medium.woff2") format("woff2"),
+		url("../../../assets/fonts/iransans/IRANSansWeb_Medium.woff") format("woff"),
+		url("../../../assets/fonts/iransans/IRANSansWeb_Medium.ttf") format("truetype");
+		//  url("fonts/Samplino.svg#Samplino") format("svg");
+}
+
+@font-face {
+	font-family: "IRANSanssWeb";
+	font-weight: 200;
+	src: url("../../../assets/fonts/iransans/IRANSansWeb_UltraLight.eot") format("eot"),
+		url("../../../assets/fonts/iransans/IRANSansWeb_UltraLight.woff2") format("woff2"),
+		url("../../../assets/fonts/iransans/IRANSansWeb_UltraLight.woff") format("woff"),
+		url("../../../assets/fonts/iransans/IRANSansWeb_UltraLight.ttf") format("truetype");
+		//  url("fonts/Samplino.svg#Samplino") format("svg");
+}
+
+html,
+body {
+	font-size: 1em;
+	font-family: IRANSanssWeb !important;
+}
+
+* {
+	font-family: IRANSanssWeb !important;
+}
+
+.nb-alert,
+.nb-angle-double-left,
+.nb-arrow-down,
+.nb-arrow-dropdown,
+.nb-arrow-dropleft,
+.nb-arrow-dropright,
+.nb-arrow-dropup,
+.nb-arrow-left,
+.nb-arrow-retweet,
+.nb-arrow-right,
+.nb-arrow-thin-down,
+.nb-arrow-thin-left,
+.nb-arrow-thin-right,
+.nb-arrow-thin-up,
+.nb-arrow-up,
+.nb-audio,
+.nb-bar-chart,
+.nb-checkmark,
+.nb-chevron-down,
+.nb-chevron-down-outline,
+.nb-chevron-left,
+.nb-chevron-left-outline,
+.nb-chevron-right,
+.nb-chevron-right-outline,
+.nb-chevron-up,
+.nb-chevron-up-outline,
+.nb-close,
+.nb-close-circled,
+.nb-cloudy,
+.nb-coffee-maker,
+.nb-compose,
+.nb-edit,
+.nb-email,
+.nb-flame-circled,
+.nb-gear,
+.nb-grid-a,
+.nb-grid-a-outline,
+.nb-grid-b,
+.nb-grid-b-outline,
+.nb-heart,
+.nb-home,
+.nb-keypad,
+.nb-layout-centre,
+.nb-layout-default,
+.nb-layout-one-column,
+.nb-layout-sidebar-left,
+.nb-layout-sidebar-right,
+.nb-layout-two-column,
+.nb-lightbulb,
+.nb-list,
+.nb-location,
+.nb-locked,
+.nb-loop,
+.nb-loop-circled,
+.nb-menu,
+.nb-notifications,
+.nb-paper-plane,
+.nb-partlysunny,
+.nb-pause,
+.nb-pause-outline,
+.nb-person,
+.nb-phone,
+.nb-play,
+.nb-play-outline,
+.nb-plus,
+.nb-plus-circled,
+.nb-power,
+.nb-power-circled,
+.nb-rainy,
+.nb-roller-shades,
+.nb-search,
+.nb-shuffle,
+.nb-skip-backward,
+.nb-skip-backward-outline,
+.nb-skip-forward,
+.nb-skip-forward-outline,
+.nb-snowy-circled,
+.nb-square,
+.nb-square-outline,
+.nb-star,
+.nb-sunny,
+.nb-sunny-circled,
+.nb-tables,
+.nb-title,
+.nb-trash,
+.nb-volume-high,
+.nb-volume-mute,
+.nb-drop,
+.nb-drops,
+.nb-info {
+	font-family: nebular !important;
+}
+
+h1,
+.btn,
+h2,
+h3,
+h4,
+h5,
+h6,
+ng2-smart-table table tr th,
+ng2-smart-table table tr th a,
+.input-group-addon,
+.form-control {
+	font-family: IRANSanssWeb !important;
+}
+
+div {
+	text-align: right;
+}
+
+
+
