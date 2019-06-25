@@ -10,23 +10,22 @@ import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { IssueButtonComponentComponent} from './issue-button-component/issue-button-component.component'
-import { AddIssueComponent } from './add-issue/add-issue.component'
+import { CartableButtonComponent} from './cartable-button/cartable-button.component'
 import * as moment from 'moment-jalaali';
+import {ActionComponent} from './action/action.component'
 
 
 @Component({
-  selector: 'ngx-issue-list',
-  templateUrl: './issue-list.component.html',
-  styleUrls: ['./issue-list.component.scss'],
+  selector: 'cartable',
+  templateUrl: './cartable.component.html',
+  styleUrls: ['./cartable.component.scss'],
   entryComponents :[
-    IssueButtonComponentComponent,
-    AddIssueComponent,
+    CartableButtonComponent,
+    ActionComponent,
   ]
 })
-export class IssueListComponent implements OnInit {
-
-  pageTitle = 'لیست موارد'
+export class CartableComponent implements OnInit {
+  pageTitle = 'کارتابل'
   source: LocalDataSource
   mode: number; // 1 : site list , 2 : site view, 3 : site edit 
   router: Router;
@@ -96,7 +95,7 @@ export class IssueListComponent implements OnInit {
 
 
   initTable(){
-    this.listSubscription = this.operationsService.caseListGet().subscribe(
+    this.listSubscription = this.operationsService.referListGet().subscribe(
       result=>{
         console.log(result)
         var arr = result as Array<{}>
@@ -240,16 +239,9 @@ export class IssueListComponent implements OnInit {
         this.router.navigate(['/pages/site/list/edit'], { queryParams: { "shopId": String(row[1]) } });
         // console.log("Edit")
       }
-      else if (row[0] == 'View') {
-        // this.mode = 2;
-        // console.log("View")
-        // this.router.navigate(['/pages/site/list/view'], { queryParams: { "shopId": String(row[1]) } });
-      }
-      else if (row[0] == 'Config') {
-        // this.router.navigateByUrl('pages/site/management');
-      }
-      else if (row[0] == 'Delete') {
-       
+      else if (row[0] == 'Refer') {
+        console.log(row)
+        this.showStaticModal(row[1]) ;
       }
     });
   }
@@ -262,32 +254,33 @@ export class IssueListComponent implements OnInit {
     actions: false,
     noDataMessage: "درخواستی یافت نشد!",
     columns: {
-      title: {
-        title: 'عنوان',
+      id:{
+        title: 'شماره',
+        type: 'string'
+      },
+      receiver: {
+        title: 'دریافت کننده',
         type: 'string',
       },
-      type: {
-        title: 'موضوع',
-        type: 'string',
+      sender: {
+        title: 'ارسال کننده',
+        type:'string'
       },
-      department: {
-        title: 'بخش مربوطه',
-        type: 'string',
-      },
-      status: {
-        title: 'وضعیت',
-        type: 'string',
-      },
-      date:{
+      date: {
         title: 'تاریخ',
         type: 'string',
       },
+      description: {
+        title: 'توضیح',
+        type: 'string',
+      },
+      
       button: {
         title: 'عملیات',
         type: 'custom',
         filter: false,
         width: '20%',
-        renderComponent: IssueButtonComponentComponent,
+        renderComponent: CartableButtonComponent,
         onComponentInitFunction: this.actions.bind(this)
       },
     },
@@ -295,15 +288,16 @@ export class IssueListComponent implements OnInit {
   onCustom(event) {
     alert(`Custom event '${event.action}' fired on row №: ${event.data.id}`)
   }
-  showStaticModal() {
-    const activeModal = this.modalService.open(AddIssueComponent, {
+  showStaticModal(caseId) {
+    const activeModal = this.modalService.open(ActionComponent, {
       size: 'lg',
       backdrop: 'static',
       container: 'nb-layout',
     });
+    activeModal.componentInstance.case = caseId;
+
   }
 
-  add(){
-    this.showStaticModal()
-  }
+  
+
 }

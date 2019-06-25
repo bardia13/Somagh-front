@@ -14,6 +14,9 @@ import { ProfileModule } from './profile/profile.module'
 import { IssueListComponent } from './issue-list/issue-list.component';
 import { IssueButtonComponentComponent } from './issue-list/issue-button-component/issue-button-component.component';
 import { AddIssueComponent } from './issue-list/add-issue/add-issue.component';
+import { CartableComponent } from './cartable/cartable.component';
+import { CartableButtonComponent } from './cartable/cartable-button/cartable-button.component';
+import { ActionComponent } from './cartable/action/action.component';
 
 
 
@@ -39,9 +42,13 @@ const PAGES_COMPONENTS = [
   ],
   declarations: [
     ...PAGES_COMPONENTS,
+    CartableComponent,
+    CartableButtonComponent,
+    ActionComponent,
   ],
   entryComponents: [
     AddIssueComponent,
+    ActionComponent,
   ],
 })
 export class PagesModule {

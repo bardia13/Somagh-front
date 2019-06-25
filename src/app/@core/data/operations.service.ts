@@ -22,9 +22,9 @@ export class OperationsService {
     createCase: this.baseUrl_panel + 'case/create/',
     departmentsList: this.baseUrl_panel + 'department/all/',
     caseList: this.baseUrl_panel + 'case/list/',
-    companyInvoiceUpdate: this.baseUrl_panel + 'apiadmin/company/invoice/update/',
-    companyInvoiceList: this.baseUrl_panel + 'apiadmin/company/invoice/list/',
-    companyInvoiceReport: this.baseUrl_panel + 'apiadmin/company/invoice/report/',
+    referList: this.baseUrl_panel + 'refer/list/',
+    staffProfileList: this.baseUrl_panel + 'user/staff/list/',
+    action : this.baseUrl_panel + 'case/action/', 
 
   }
 
@@ -84,6 +84,15 @@ export class OperationsService {
     return this.http.get(this.myUrls['caseList'], this.httpOptions)
   }
 
+  referListGet(): Observable<{}>{
+    return this.http.get(this.myUrls['referList'], this.httpOptions)
+  }
+  
+  staffListGet(): Observable<{}>{
+    return this.http.get(this.myUrls['staffProfileList'], this.httpOptions)
+  }
 
-
+  actionPost(form : any): Observable<{}>{
+    return this.http.post(this.myUrls['action'], form, this.httpOptions)
+  }
 }

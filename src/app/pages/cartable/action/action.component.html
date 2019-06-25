@@ -1,0 +1,45 @@
+<div class="page-title" style="padding : 20px ;">
+  <h3>ارجاع</h3>
+</div>
+<nb-card>
+  <nb-card-body>
+    <form [formGroup]="userForm">
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="receiver"> گیرنده </label>
+            
+                  <ng-select [items]="this.staffs"
+                            bindLabel="name"
+                            bindValue="id"
+                            id = "receiver"
+                            formControlName="receiver"
+                            style="display: inline-block !important ;"
+                            class="form-control-select"
+                            (change)="onReceiverChange($event)"                            
+                            >
+                            
+                              
+                  </ng-select>
+            
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="description"> توضیح</label>
+              <input type="text" formControlName="description" class="form-control" id="description" placeholder="">
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+      <button (click)="submit()" class="btn btn-primary">ثبت</button>
+    </form>
+  </nb-card-body>
+</nb-card>
+

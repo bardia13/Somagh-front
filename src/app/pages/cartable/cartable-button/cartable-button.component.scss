@@ -1,0 +1,61 @@
+$botton_Bcolor :#4596f6;
+$botton_Bcolor_hover :#368cf5;
+
+.table-button {
+    display: inline-block !important;
+    font-size: 1.25rem !important;
+    line-height: 1.25rem !important;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #7ca749;
+    padding: 7px 5px;
+    font-size: 8px;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    background-color: #71a038;
+}
+
+.btn_hint {
+    position: relative;
+    display: inline-block;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.btn_hint .tooltiptext {
+    visibility: hidden;
+    width: 50px;
+    height: 21px;
+    background-color: #666666;
+    text-align: center;
+    border-radius: 5px;
+    padding: 3px 0;
+    border: none;
+    position: absolute;
+    z-index: 0;
+    bottom: 122%;
+    margin-left: -24px;
+    font-size: 11px;
+    left: 50%;
+    color: #ffffff;
+}
+
+.btn_hint .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #666666 transparent transparent transparent;
+}
+
+.btn_hint:hover .tooltiptext {
+    visibility: visible;
+}

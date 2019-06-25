@@ -5,6 +5,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component'
 import { IssueListComponent } from './issue-list/issue-list.component'
+import { CartableComponent } from './cartable/cartable.component'
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
@@ -25,6 +26,10 @@ const routes: Routes = [{
     {
       path: 'issues',
       component : IssueListComponent,
+    },
+    {
+      path: 'cartable',
+      component : CartableComponent,
     }
   ],
 }];
