@@ -3,6 +3,7 @@ import { PipeTransform } from '@angular/core';
 import { EnglishNumToPersianPipe } from './../../@theme/pipes/english-num-to-persian.pipe';
 import { NumberWithCommaPipe } from './../../@theme/pipes/number-with-commas.pipe';
 import { LocalDataSource } from 'ng2-smart-table';
+import { OperationsService } from '../../@core/data/operations.service'
 import { Subscription } from 'rxjs/Subscription';
 import { JalaaliPipe } from '../../@theme/pipes/jalaali.pipe'
 import { FormGroup } from '@angular/forms';
@@ -29,12 +30,13 @@ export class IssueListComponent implements OnInit {
   source: LocalDataSource
   mode: number; // 1 : site list , 2 : site view, 3 : site edit 
   router: Router;
-
+  listSubscription : Subscription ;
   
 
   constructor(private modalService: NgbModal,
     private spinner: NgxSpinnerService,
-    router: Router) {
+    router: Router,
+    private operationsService: OperationsService) {
     this.router = router;
   }
 
@@ -93,6 +95,11 @@ export class IssueListComponent implements OnInit {
 
 
   initTable(){
+    this.listSubscription = this.operationsService.caseListGet().subscribe(
+      result=>{
+        console.log(result)
+      }
+    )
     this.source = new LocalDataSource(this.data)
     this.spinner.hide();
   }
@@ -283,7 +290,7 @@ export class IssueListComponent implements OnInit {
   }
   showStaticModal() {
     const activeModal = this.modalService.open(AddIssueComponent, {
-      size: 'sm',
+      size: 'lg',
       backdrop: 'static',
       container: 'nb-layout',
     });

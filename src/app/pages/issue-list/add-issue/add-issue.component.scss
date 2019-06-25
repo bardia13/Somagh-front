@@ -1,12 +1,59 @@
-$botton_Bcolor :#4596f6;
-$botton_Bcolor_hover :#368cf5;
-$base-color : #4596f6;
-
+@import "~@ng-select/ng-select/themes/default.theme.css";
 nb-card {
-    background: #fdfdfd;
-}
-
-.form_title {
+    position: relative;
+    
+    nb-card-body {
+      background-color: #fdfdfd;
+      
+      .body_inner {
+        padding: 55px 30px;
+      }
+    
+    }
+  }
+  
+  
+  
+  .footer{
+    position: relative;
+  }
+  
+  .footer .btn {
+    padding: 6px 20px;
+    border-radius: 5px;
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.87;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+  .footer .contiue_btn{
+    background-color: #4596f6;
+    right: 90%;
+  }
+  .footer .contiue_btn:hover,
+  .footer .contiue_btn:active,
+  .footer .contiue_btn:focus {
+    background-color: #368cf5;
+  }
+  .footer .back_btn{
+    background-color: #959595;
+    position: absolute;
+    right: 0;
+  }
+  .footer .contiue_btn:hover,
+  .footer .contiue_btn:active,
+  .footer .contiue_btn:focus {
+    background-color: rgb(35, 131, 248);
+  }
+  
+  
+  .form_title {
+    z-index: 999 !important ;
     height: 15px;
     font-size: 15px;
     font-weight: 500;
@@ -21,56 +68,57 @@ nb-card {
     right: 48px;
     top: -11px;
     padding: 0 10px;
-}
-
-.form-control {
+  }
+  
+  .form-control {
     padding: 8px;
     height: 39px;
     border-radius: 5px;
     background-color: #fdfdfd;
-    border: solid 1px #dedbdb;
+    border: solid 1px #b7b7b7;
     display: inline-block;
     width: 68%;
     margin-right: 20px;
     font-family: IRANSans;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.8;
+    line-height: 2.33;
     letter-spacing: normal;
-}
-
-.form-control::placeholder {
+  }
+  
+  .form-control::placeholder {
     color: #9b9b9b;
-}
-
-.form-control::placeholder {
-    font-size: 13px;
+  }
+  
+  .form-control::placeholder {
+    font-size: 14px;
     font-weight: 400;
-}
-
-.form-control:-ms-input-placeholder {
+  }
+  
+  .form-control:-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-}
-
-.form-control::-ms-input-placeholder {
+  }
+  
+  .form-control::-ms-input-placeholder {
     /* Microsoft Edge */
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-}
-
-textarea {
+  }
+  
+  textarea {
     height: auto;
     font-size: 14px;
     font-weight: 400;
-}
-
-form label {
+  }
+  
+  form label {
     width: 22%;
     height: 17px;
+    font-family: IRANSans;
     font-size: 15px;
     font-weight: normal;
     font-style: normal;
@@ -79,45 +127,79 @@ form label {
     letter-spacing: normal;
     text-align: left;
     color: #6c6c6c;
-}
-
-.form-group small {
+  }
+  
+  .form-group small {
     margin-right: 9.2rem !important;
     font-size: 12px;
     font-weight: 400;
-}
-
-form button {
-    float: left;
-    margin-left: 4%;
-    margin-top: 15px;
-    font-size: 15px;
-    font-weight: 500;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: #ffffff;
-    border-radius: 5px;
-    border: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    padding: 6px 45px;
-    text-align: center;
+  }
+  
+  .help_icon {
+    margin-right: 8px;
+    margin-left: 20px;
     cursor: pointer;
+  }
+  
+  nb-card.guide_box {
+    background-color: #f6f7f8;
+    border: none;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
     font-stretch: normal;
-    background-color: $botton_Bcolor;
-}
+    line-height: 2;
+    letter-spacing: normal;
+    color: #585959;
+    padding: 25px;
+  }
 
-form button:hover {
-    background-color: $botton_Bcolor_hover;
-}
 
-#issueDiscription {
-    margin-top: 10px;
-    width: 196%;
-}
+  .coin-name{
+    padding-top : .5rem ;
+    padding-right : 1.5rem ;
+  }
 
-.page-title{
-    padding: 20px;
-}
+  .label-inline{
+    padding-left: 10px ;
+    display: inline !important ;
+    text-align: right !important ;
+  }
+
+
+  .coin-item :hover{
+    font-size: 1.25rem ;
+    font-weight: 700 ;
+  }
+  .coin-item :focus{
+    font-size: 1.25rem ;
+    font-weight: 700 ;
+  }
+
+  .coin-item-selected{
+    font-size: 1.25rem ;
+    font-weight: 700 ;
+  }
+
+  .inline-block-span{
+      display: inline-block !important;
+      
+  }
+
+  .form-control-select{
+    padding: 8px;
+    height: 39px;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    // border: solid 1px #b7b7b7;
+    display: inline-block;
+    width: 70%;
+    margin-right: 13px;
+    font-family: IRANSans;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.33;
+    letter-spacing: normal;
+  }

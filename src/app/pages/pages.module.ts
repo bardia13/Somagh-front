@@ -3,7 +3,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { DpDatePickerModule } from 'ng2-jalali-date-picker';
 
-
+import { NgSelectModule } from '@ng-select/ng-select';
 import { PagesComponent } from './pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { PagesRoutingModule } from './pages-routing.module';
@@ -35,6 +35,7 @@ const PAGES_COMPONENTS = [
     Ng2SmartTableModule,
     NgxSpinnerModule,
     DpDatePickerModule,
+    NgSelectModule,
   ],
   declarations: [
     ...PAGES_COMPONENTS,

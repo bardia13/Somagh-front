@@ -1,5 +1,5 @@
-<div class="page-title">
-  <h3>ویرایش کاربر</h3>
+<div class="page-title" style="padding : 20px ;">
+  <h3>افزودن یک مدل جدید</h3>
 </div>
 <nb-card>
   <nb-card-body>
@@ -16,8 +16,21 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="form-group">
-              <label for="type"> موضوع </label>
-              <input type="text" formControlName="type" class="form-control" id="type" placeholder="">
+              <label for="type"> نوع </label>
+            
+                  <ng-select [items]="this.status"
+                            bindLabel="status"
+                            bindValue="id"
+                            id = "type"
+                            formControlName="type"
+                            style="display: inline-block !important ;"
+                            class="form-control-select"
+                            (change)="onTypeChange($event)"                            
+                            >
+                            
+                              
+                  </ng-select>
+            
             </div>
           </div>
         </div>
@@ -32,9 +45,19 @@
         <div class = "row">
           <div class="col-sm-12">
             <div class="form-group">
-              <label for="department"> بخش مسؤل</label>
-              <input type="text" disabled="disabled" formControlName="department" class="form-control" id="department"
-                placeholder="">
+              <label for="departments"> بخش مسؤل</label>
+              <ng-select [items]="this.departments"
+                            bindLabel="name"
+                            bindValue="id"
+                            id = "departments"
+                            fofrmControlName="department"
+                            style="display: inline-block !important ;"
+                            class="form-control-select"
+                            (change)="onDescChange($event)"                            
+                            >
+                            
+                              
+                  </ng-select>
             </div>
           </div>
         </div>

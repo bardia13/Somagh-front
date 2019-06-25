@@ -7,10 +7,10 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject } from '@
 import { Router } from '@angular/router';
 import { NB_AUTH_OPTIONS, NbAuthSocialLink } from '@nebular/auth/auth.options';
 import { getDeepFromObject } from '@nebular/auth/helpers';
-
+import { OperationsService } from '../../@core/data/operations.service'
 import { NbAuthService } from '@nebular/auth/services/auth.service';
 import { NbAuthResult } from '@nebular/auth/services/auth-result';
-
+import { NbAuthOAuth2Token } from '@nebular/auth';
 @Component({
   selector: 'ngx-login',
   templateUrl: './login.component.html',
@@ -32,7 +32,8 @@ export class NgxLoginComponent {
   constructor(protected service: NbAuthService,
               @Inject(NB_AUTH_OPTIONS) protected options = {},
               protected cd: ChangeDetectorRef,
-              protected router: Router) {
+              protected router: Router,
+              private operationService: OperationsService) {
 
     this.redirectDelay = this.getConfigValue('forms.login.redirectDelay');
     this.showMessages = this.getConfigValue('forms.login.showMessages');
@@ -51,6 +52,11 @@ export class NgxLoginComponent {
 
       if (result.isSuccess()) {
         this.messages = result.getMessages();
+        this.service.onTokenChange().subscribe(
+          (token: NbAuthOAuth2Token) => {
+            this.operationService.setHttpHeader(token);
+          }
+        )
         console.log(this.messages)
       } else {
         this.errors = result.getErrors();
