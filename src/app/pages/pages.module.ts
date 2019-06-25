@@ -17,8 +17,8 @@ import { AddIssueComponent } from './issue-list/add-issue/add-issue.component';
 import { CartableComponent } from './cartable/cartable.component';
 import { CartableButtonComponent } from './cartable/cartable-button/cartable-button.component';
 import { ActionComponent } from './cartable/action/action.component';
-
-
+import { ReportsComponent } from './reports/reports.component'
+import { ReportButtonComponent } from './reports/report-button/report-button.component'
 
 
 const PAGES_COMPONENTS = [
@@ -26,6 +26,8 @@ const PAGES_COMPONENTS = [
   IssueListComponent,
   IssueButtonComponentComponent,
   AddIssueComponent,
+  ReportsComponent,
+  ReportButtonComponent,
 ];
 
 @NgModule({
@@ -49,6 +51,7 @@ const PAGES_COMPONENTS = [
   entryComponents: [
     AddIssueComponent,
     ActionComponent,
+    ReportButtonComponent
   ],
 })
 export class PagesModule {

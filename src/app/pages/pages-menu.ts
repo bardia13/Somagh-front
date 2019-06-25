@@ -18,6 +18,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'کارتابل',
     link: '/pages/cartable/',
+  },
+  {
+    title: 'گزارش', 
+    link: '/pages/report/'
   }
   
 ];

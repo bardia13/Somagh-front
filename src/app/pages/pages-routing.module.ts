@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component'
 import { IssueListComponent } from './issue-list/issue-list.component'
 import { CartableComponent } from './cartable/cartable.component'
+import { ReportsComponent } from './reports/reports.component'
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
@@ -30,6 +31,10 @@ const routes: Routes = [{
     {
       path: 'cartable',
       component : CartableComponent,
+    },
+    {
+      path: 'report',
+      component : ReportsComponent
     }
   ],
 }];
